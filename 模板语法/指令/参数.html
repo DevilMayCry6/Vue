@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    </head>
+    <body>
+        <p>数在指令后以冒号指明。</p>
+        <p>例如， v-bind 指令被用来响应地更新 HTML 属性</p>
+        <div id="app">
+            <pre><a v-bind:href="url">github</a></pre>
+        </div>
+        <p>在这里 href 是参数，告知 v-bind 指令将该元素的 href 属性与表达式 url 的值绑定</p>
+        <script>
+            new Vue({
+                el:"#app",data:{
+                    url:"https://github.com/DevilMayCry6"
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Vue构造器需要的内容</title>
+        <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    </head>
+    <body>
+        <div id="vue_det">
+            <h1>site : {{site}}</h1>
+            <h2>url : {{url}}</h2>
+            <h3>{{details()}}</h3>
+        </div>
+        <script type="text/javascript">
+            var vm=new Vue({
+                el : '#vue_det',
+                data : {
+                    site : "site 1 ",
+                    url : "url : {{url}}",
+                    alexa : "10000"
+                },
+                methods : {
+                    details : function(){
+                        return this.site+"this"
+                    }
+                }  
+            })
+        </script>
+    </body>
+</html>

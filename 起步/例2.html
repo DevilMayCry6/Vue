@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    </head>
+    <body>
+        <p>当一个 Vue 实例被创建时，它向 Vue 的响应式系统中加入了
+            其 data 对象中能找到的所有的属性。当这些属性的值发生改
+            变时，html 视图将也会产生相应的变化。</p>
+        <div id="vue_det">
+            <h1>site : {{site}}</h1>
+            <h2>url : {{url}}</h2>
+            <h3>Alexa : {{alexa}}</h3>
+        </div>
+        <script type="text/javascript">
+            //我们的数据对象
+            var data = {site:"github",url:"github.com",alexa:10000}
+            var vm = new Vue({
+                el : '#vue_det',
+                data : data
+            })
+            //它们引用相同的对象！
+            document.write(vm.site === data.site)//true
+            document.write("<br>")
+            //设置属性也会影响到原始数据
+            vm.site = "git"
+            document.write(data.site + "<br>")//git
+
+            //反之亦然
+            data.alexa = 1234
+            document.write(vm.alexa)//1234
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    </head>
+    <body>
+        <p>使用 v-html 指令用于输出 html 代码</p>
+        <div id="app">
+            <div v-html="m"></div>
+        </div>
+        <script>
+            new Vue({
+                el:"#app",
+                data:{
+                    m :"<h1>app</h1>"
+                }
+            })
+        </script>
+    </body>
+</html>
