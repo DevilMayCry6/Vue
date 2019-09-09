@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    </head>
+    <body>
+        <p>v-for 指令需要以 site in sites 形式的特殊语法，
+             sites 是源数据数组并且 site 是数组元素迭代的别名</p>
+        <p>v-for可以绑定数据到数组来渲染一个列表</p>
+        <div id="app">
+            <ol>
+                <li v-for="site in sites">
+                    {{site.name}}
+                </li>
+            </ol>
+        </div>
+        <script>
+            new Vue({
+                el:"#app",data:{
+                    sites:[
+                        {name:"runoob"},
+                        {name:"github"},
+                    ]
+                }
+            })
+        </script>
+    </body>
+</html>

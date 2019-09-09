@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    </head>
+    <body>
+        <p>v-else-if 用作 v-if 的else if 块</p>
+        <p>可以链式的多次使用</p>
+        <p>v-else、v-else-if必须跟在 v-if 或者 v-else-if 之后</p>
+        <div id="app">
+            <div v-if="type === 'A'">
+                A
+            </div>
+            <div v-else-if="type === 'B'">
+                B
+            </div>
+            <div v-else-if="type === 'C'">
+                C
+            </div>
+            <div v-else>
+                Not A/B/C
+            </div>
+        </div>
+        <script>
+            new Vue({
+                el:"#app",data:{
+                    type:"A"
+                }
+            })
+        </script>
+    </body>
+</html>

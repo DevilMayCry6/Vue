@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div v-if="Math.random()>0.5">
+                大于0.5
+            </div>
+            <div v-else>
+                不大于0.5
+            </div>
+        </div>
+        <script>
+            new Vue({
+                el:"#app"
+            })
+        </script>
+    </body>
+</html>

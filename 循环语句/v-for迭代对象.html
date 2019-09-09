@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    </head>
+    <body>
+        <p>v-for可以通过一个对象的属性来迭代数据</p>
+        <div id="app">
+            <ul>
+                <li v-for="value in object">
+                    {{value}}
+                </li>
+            </ul>
+        </div>
+        <script>
+            new Vue({
+                el:"#app",
+                data:{
+                    object:{
+                        name:"github",
+                        url:"https://github.com/DevilMayCry6",
+                        slogan:"GITHUB"
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- <ul> -->
+                <!-- <template v-for="site in sites">
+                    <li>{{site.name}}</li>
+                    <li>-----------</li>
+                </template> -->
+            <!-- </ul> -->
+            <ol>
+                    <li v-for="site in sites">
+                        {{site.name}}
+                    </li>
+                </ol>
+        </div>
+        <script>
+            new Vue({
+                el:"#app",data:{
+                    sites:[
+                        {name:"1"},
+                        {name:"2"}
+                    ]
+                }
+            })
+        </script>
+    </body>
+</html>

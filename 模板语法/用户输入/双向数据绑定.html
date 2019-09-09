@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+        <div id="app">
+            <p>v-model 指令用来在 input、select、textarea、checkbox、radio 等
+                表单控件元素上创建双向数据绑定，根据表单上的值，自动更新绑定的元素的值。</p>
+            <p>{{message}}</p>
+            <input type="text" v-model="message">
+        </div>
+        <script>
+            new Vue({
+                el:'#app',data:{
+                    message:"GITHUB"
+                }
+            })
+        </script>
+    </body>
+</html>
