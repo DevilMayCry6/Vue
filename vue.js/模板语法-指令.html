@@ -1,0 +1,36 @@
+<html>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <body>
+        <div id="app">
+            <p v-if='seen'>现在能看到</p>
+            <a v-bind:href="url">4399</a>
+            <div @click="click1">
+                <div @click.stop="click2">
+                    click me
+                </div>
+            </div>
+        </div>
+        <script>
+            var vm = new Vue
+            ({
+                el:"#app",
+                data:
+                {
+                    seen:false,
+                    url:"http://www.4399.com",
+                },
+                methods:
+                {
+                    click1:function()
+                    {
+                        console.log('click1');
+                    },
+                    click2:function()
+                    {
+                        console.log('click2')
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
