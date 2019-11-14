@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+        <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+        <script>
+            Vue.prototype.$app = "My App"
+
+            new Vue({
+                beforeCreate:function(){
+                    console.log(this.$app)
+                }
+            })
+        </script>
+    </body>
+</html>
