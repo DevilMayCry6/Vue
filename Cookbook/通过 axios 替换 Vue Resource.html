@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.js"></script>
+        <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+        <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+        <div id="app">
+            <ul>
+                <li v-for="user in users">{{ user.name }}</li>
+            </ul>
+        </div>
+        <script>
+            Vue.prototype.$http = axios;
+            //设置 Vue.prototype.$http 为 axios 的别名
+
+            new Vue({
+                el:"#app",
+                data:{
+                    users:[]
+                },
+                created(){
+                    var vm = this
+                    this.$http
+                    .get('https://jsonplaceholder.typicode.com/users')
+                    .then(function (response){
+                        vm.users = response.data
+                    })
+                }
+            })
+        </script>
+    </body>
+</html>
