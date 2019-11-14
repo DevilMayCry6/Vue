@@ -1,0 +1,21 @@
+<html>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <script>
+        Vue.prototype.appName ="My App"
+    </script>
+    <script>
+        new Vue({
+            data:{
+                // appName 也是我们定义的一个实例属性名
+                appName:"其他应用程序的名称"
+            },
+            beforeCreate:function(){
+                console.log(this.appName)
+            },
+            created:function(){
+                console.log(this.appName)
+            }
+        })
+    </script>
+</html>
