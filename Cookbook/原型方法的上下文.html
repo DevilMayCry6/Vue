@@ -1,0 +1,26 @@
+<html>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <script>
+        Vue.prototype.$reverseText = function(propertyName){
+            // Vue.prototype.$reverseText = propertyName => {  
+                // 注意如果你使用了 ES6/2015 的箭头函数，则其绑定的上下文不会正常工作，因为它们会隐式地绑定其父级作用域。也就是说使用箭头函数的版本：
+                //会抛出一个错误: Uncaught TypeError: Cannot read property 'split' of undefined
+            this[propertyName] = this[propertyName]
+            .split('')
+            .reverse()
+            .join('')
+        }
+
+        new Vue({
+            data:{
+                message:"Hello"
+            },
+            created:function(){
+                console.log(this.message)//=>"Hello"
+                this.$reverseText('message')
+                console.log(this.message)//=>"olleH"
+            }
+        })
+    </script>
+</html>
