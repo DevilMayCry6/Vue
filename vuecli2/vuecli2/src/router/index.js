@@ -32,7 +32,7 @@ export default new Router({
         },
         {
           path:'/b1',
-          component:B
+          component:B1
         }
       ]
     },
@@ -52,7 +52,7 @@ export default new Router({
     // },
     // {
     //   path:'/b1',
-    //   component:B
+    //   component:B1
     // }
   ]
 })
