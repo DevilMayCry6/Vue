@@ -16,27 +16,7 @@ export default new Router({
       name: 'first',
       component: First,
       children:[
-        {
-          path:"/a",
-          component:A,
-          children:[
-            {
-              path:'/a1',
-              component:A1
-            }
-          ]
-        },
-        {
-          path:"/b",
-          component:B
-        },
-        {
-          path:'/b1',
-          component:B1
-        }
-      ]
-    },
-    {
+         {
       path:"/a",
       component:A,
       children:[
@@ -54,5 +34,9 @@ export default new Router({
       path:'/b1',
       component:B1
     }
+      ]
+    },
+
+
   ]
 })
