@@ -10,6 +10,8 @@ import B1 from '@/components/B1'
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
+  //路由模式改为 history ,去掉网站的 #
   routes: [
     {
       path: '/',
