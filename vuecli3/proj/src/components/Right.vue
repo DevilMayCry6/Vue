@@ -1,16 +1,20 @@
 <template>
     <div>
         <div v-if="kk==1">
-            <GoodList></GoodList>
+            <GoodList :goodId="1"></GoodList>
         </div>
-        <div v-if="kk==2">
-2
+        <div v-else-if="kk==2">
+            <GoodList :goodId="2"></GoodList>
+            22
+        </div>
+        <div v-else>
+            <Good-list :goodId="1"></Good-list>
         </div>
     </div>
 </template>
 <script>
     import Msg from './msg.vue'
-    import GoodList from './goodList.vue'
+    import GoodList from './goodsList.vue'
     export default{
         data(){
             return{
