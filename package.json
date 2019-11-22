@@ -1,0 +1,23 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "v-bind 缩写 <!-- 完整语法 --> <a v-bind:href=\"url\"></a> <!-- 缩写 --> <a:href=\"url\"></a>",
+  "main": "vue.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevilMayCry6/Vue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevilMayCry6/Vue/issues"
+  },
+  "homepage": "https://github.com/DevilMayCry6/Vue#readme"
+}
