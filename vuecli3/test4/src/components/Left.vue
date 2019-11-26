@@ -2,8 +2,8 @@
     <div>
         <div class="title">title</div>
         <ul class="menu">
-            <li>左</li>
-            <li>右</li>
+            <li @click="menu1">左</li>
+            <li @click="menu2">右</li>
             <li>左</li>
             <li>右</li>
             <li>左</li>
@@ -28,5 +28,19 @@
         margin-bottom: 2px;
         background:white;
         line-height: 50px;
+        cursor: pointer;
     }
 </style>
+<script>
+    import Msg from './msg.vue'
+    export default{
+        methods:{
+            menu1:function(){
+                Msg.$emit("val","1");
+            },
+            menu2:function(){
+                Msg.$emit("val","2");
+            },
+        }
+    }
+</script>
