@@ -4,7 +4,7 @@
         <ul class="menu">
             <li @click="menu1">左</li>
             <li @click="menu2">右</li>
-            <li>左</li>
+            <li @click="menu3">左</li>
             <li>右</li>
             <li>左</li>
             <li>右</li>
@@ -41,6 +41,9 @@
             menu2:function(){
                 Msg.$emit("val","2");
             },
+            menu3:function(){
+                Msg.$emit("val","3")
+            }
         }
     }
 </script>
